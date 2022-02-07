@@ -4,8 +4,8 @@ class Település:
         self.azonosito = azonosito
         self.nev = nev
         self.rang = rang
-        self.kistbes = kistbes
-        self.területe = területe
+        self.kistbes = kistbes # kistérségi besorolás
+        self.területe = területe # terület hektárban
         self.népessége = népessége
         self.lakásszám = lakásszám
         Település.lista.append(self)
