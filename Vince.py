@@ -92,16 +92,28 @@ def feladat_24(lista):
 
 # 25)	Írja ki a Makói kistérség településeinek népsűrűségét!
 
+def KistérségTelepüléseinekNépsűrűsége(lista, kist):
+    temp = {}
+    for i in lista:
+        if i.kistbes == kist:
+            if not i.nev in temp.keys:
+                temp[i.nev] = i.népessége / i.területe
+    return temp
 
+def feladat_25(lista):
+    return KistéerségLegnépesebbTelepülése(lista, "Makói")
 
 # 26)	Írja ki a Szegedi kistérség településeinek népsűrűségét!
 
-
+def feladat_26(lista):
+    return KistéerségLegnépesebbTelepülése(lista, "Szegedi")
 
 # 27)	Írja ki a Szentesi kistérség településeinek népsűrűségét!
 
-
+def feladat_27(lista):
+    return KistéerségLegnépesebbTelepülése(lista, "Szentesi")
 
 # 28)	Írja ki a Kisteleki kistérség településeinek népsűrűségét!
 
-
+def feladat_28(lista):
+    return KistéerségLegnépesebbTelepülése(lista, "Kisteleki")
