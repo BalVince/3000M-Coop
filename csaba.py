@@ -14,28 +14,28 @@ with open("input.txt", "r", encoding="utf8") as f:
     for sor in f:
         s = sor.strip().split("\t")
         t = Település(int(s[0]), s[1], s[2], s[3], int(s[4]), int(s[5]), int(s[6]))
-
+"""
 def feladat_29(lista):
     for elem in lista:
-        if elem.kistbes == "Makói" and elem.népesség < 1000:
+        if elem.kistbes == "Makói" and elem.népessége < 1000:
             return False
     return True
 
 def feladat_30(lista):
     for elem in lista:
-        if elem.kistbes == "Szentesi" and elem.népesség < 10000:
+        if elem.kistbes == "Szentesi" and elem.népessége < 10000:
             return False
     return True
 
 def feladat_31(lista):
     for elem in lista:
-        if elem.kistbes == "Szegedi" and elem.népesség < 2000:
+        if elem.kistbes == "Szegedi" and elem.népessége < 2000:
             return False
     return True
 
 def feladat_32(lista):
     for elem in lista:
-        if elem.kistbes == "Kisteleki" and elem.népesség < 10000:
+        if elem.kistbes == "Kisteleki" and elem.népessége < 10000:
             return False
     return True
 
@@ -94,3 +94,13 @@ def feladat_40(lista):
         else:
             listasd[elem.kistbes] = elem.területe
     return listasd
+"""
+def feladat_29k(lista): return len([elem for elem in lista if elem.kistbes == "Makói" and elem.népessége < 1000]) == 0
+    #return len([elem for elem in lista if elem.kistbes == "Makói" and elem.népesség >= 1000]) == len([elem for elem in lista if elem.kistbes == "Makói"])
+def feladat_30k(lista): return len([elem for elem in lista if elem.kistbes == "Szentesi" and elem.népesség < 10000]) == 0
+def feladat_31k(lista): return len([elem for elem in lista if elem.kistbes == "Szegedi" and elem.népesség < 2000]) == 0
+def feladat_32k(lista): return len([elem for elem in lista if elem.kistbes == "Kisteleki" and elem.népesség < 10000]) == 0
+def feladat_33k(lista): return 
+def feladat_34k(lista):
+    for elem in [elem for elem in lista if elem.kistbes == "Szentesi"]:
+        print(f"{elem.nev}: {round(elem.népessége / elem.lakásszám, 2)}")
